@@ -32,4 +32,9 @@ public class StudentControllerImpl implements StudentController {
         studentService.deleteStudent(studentId);
         return ResponseEntity.noContent().build();
     }
+
+    @Override
+    public ResponseEntity<StudentDto> getStudentById(Long studentId) {
+        return ResponseEntity.ok(studentService.getStudentById(studentId));
+    }
 }

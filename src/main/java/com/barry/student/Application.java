@@ -23,12 +23,12 @@ public class Application {
     CommandLineRunner start(StudentRepository studentRepository){
         return args -> {
             List<Student> students =List.of(
-                Student.builder()
-                    .id(1L)
-                    .name("John")
-                    .email("john@gmail.com")
-                    .gender(MALE)
-                    .build(),
+                    Student.builder()
+                            .id(1L)
+                            .name("John")
+                            .email("john@gmail.com")
+                            .gender(MALE)
+                            .build(),
 
                     Student.builder()
                             .id(2L)
@@ -50,16 +50,13 @@ public class Application {
                             .email("victor@gmail.com")
                             .gender(MALE)
                             .build(),
-                            Student.builder()
-                                    .id(5L)
-                                    .name("Aline")
-                                    .email("aline@gmail.com")
-                                    .gender(FEMALE)
-                                    .build()
-            );
+                    Student.builder()
+                            .id(5L)
+                            .name("Aline")
+                            .email("aline@gmail.com")
+                            .gender(FEMALE)
+                            .build());
             studentRepository.saveAll(students).forEach(System.out::println);
-
-
         };
     }
 }

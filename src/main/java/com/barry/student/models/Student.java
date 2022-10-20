@@ -1,13 +1,17 @@
 package com.barry.student.models;
 
 import com.barry.student.enums.Gender;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
+import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
+import lombok.Builder;
 import lombok.ToString;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Enumerated;
+import javax.persistence.Id;
+import javax.persistence.EnumType;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotNull;
 

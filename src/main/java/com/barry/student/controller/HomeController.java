@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/")
 public interface HomeController {
 
-
     @GetMapping(value = "${swagger-ui.redirect:}")
     @Operation(description = "Redirect to swagger-ui.html")
     String redirectToSwaggerUi();
