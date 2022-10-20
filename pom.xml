@@ -13,7 +13,7 @@
 
     <groupId>com.barry.student</groupId>
     <artifactId>student-service</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>0.0.1</version>
 
     <properties>
         <java.version>16</java.version>
