@@ -15,7 +15,6 @@ import java.util.List;
 @RequestMapping("/api/v1/students")
 public interface StudentController {
 
-
     @GetMapping
     ResponseEntity<List<StudentDto>> getAllStudents();
 
@@ -24,5 +23,8 @@ public interface StudentController {
 
     @DeleteMapping("/{id}")
     ResponseEntity<Void> deleteStudentById(@PathVariable(name = "id") Long studentId);
+
+    @GetMapping("/{id}")
+    ResponseEntity<StudentDto> getStudentById(@PathVariable(name = "id") Long studentId);
 
 }

@@ -6,7 +6,6 @@ import java.util.List;
 
 public interface StudentService {
 
-
     List<StudentDto> getAllStudents();
 
     void addStudent(StudentDto studentDto);
