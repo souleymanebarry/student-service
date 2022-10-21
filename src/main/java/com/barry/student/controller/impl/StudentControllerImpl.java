@@ -4,6 +4,7 @@ import com.barry.student.controller.StudentController;
 import com.barry.student.dtos.StudentDto;
 import com.barry.student.service.StudentService;
 import lombok.AllArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -24,7 +25,7 @@ public class StudentControllerImpl implements StudentController {
     @Override
     public ResponseEntity<Void> saveStudent(StudentDto studentDto) {
         studentService.addStudent(studentDto);
-        return ResponseEntity.noContent().build();
+        return ResponseEntity.status(HttpStatus.CREATED).build();
     }
 
     @Override
@@ -37,4 +38,5 @@ public class StudentControllerImpl implements StudentController {
     public ResponseEntity<StudentDto> getStudentById(Long studentId) {
         return ResponseEntity.ok(studentService.getStudentById(studentId));
     }
+
 }

@@ -9,8 +9,15 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 @Slf4j
 public class BadRequestException extends RuntimeException {
 
-    public BadRequestException(String message) {
+    private final HttpStatus status;
+
+    public BadRequestException(String message, HttpStatus httpStatus) {
         super(message);
+        this.status = httpStatus;
         log.error(message);
+    }
+
+    public HttpStatus getStatus() {
+        return status;
     }
 }
